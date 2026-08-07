@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apirelio-django"
+version = "0.2.0"
+description = "Fail-safe customer-aware API analytics middleware for Django and Django REST Framework."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Apirelio" }]
+keywords = ["apirelio", "django", "drf", "api", "analytics", "observability"]
+dependencies = [
+  "apirelio>=0.2.0,<0.3.0",
+  "django>=4.2,<7",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Framework :: Django",
+  "Framework :: Django :: 4.2",
+  "Framework :: Django :: 5",
+  "Framework :: Django :: 6",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.urls]
+Homepage = "https://apirelio.com/docs"
+Repository = "https://github.com/pryznar/apirelio-django"
+Issues = "https://github.com/pryznar/apirelio-django/issues"
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2",
+  "djangorestframework>=3.14",
+  "django-stubs>=4.2",
+  "djangorestframework-stubs>=3.14",
+  "mypy>=1.10,<2",
+  "pytest>=8",
+  "ruff>=0.6",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+apirelio_django = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+plugins = ["mypy_django_plugin.main"]
+files = ["src", "tests"]
+
+[tool.django-stubs]
+django_settings_module = "tests.settings"
