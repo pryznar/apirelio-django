@@ -34,6 +34,7 @@ Issues = "https://github.com/pryznar/apirelio-django/issues"
 [project.optional-dependencies]
 dev = [
   "build>=1.2",
+  "django>=4.2,<6",
   "djangorestframework>=3.14",
   "django-stubs>=4.2",
   "djangorestframework-stubs>=3.14",
