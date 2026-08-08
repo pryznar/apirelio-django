@@ -1,5 +1,9 @@
 # Apirelio Django SDK
 
+[Documentation](https://apirelio.com/docs/python/django) · [PyPI](https://pypi.org/project/apirelio-django/) · [Apirelio](https://apirelio.com)
+
+> Connect Django and DRF API errors, latency and releases to the affected customers without capturing request or response payloads.
+
 Native Django middleware for privacy-safe, customer-aware API analytics. The same package supports
 regular Django views and Django REST Framework endpoints.
 
@@ -46,4 +50,3 @@ The middleware records the final status, duration, resolved URL pattern and DRF 
 synchronous and asynchronous Django handlers are supported. Events enter the bounded Python Core
 background queue and are flushed when the process exits. Bodies, query strings, cookies,
 authorization values, email addresses and client IP addresses are never captured.
-
