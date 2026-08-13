@@ -1,0 +1,9 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Setup documentation
+    url: https://apirelio.com/docs
+    about: Framework guides and privacy-safe configuration.
+  - name: Live demo
+    url: https://apirelio.com/demo?utm_source=github&utm_medium=readme&utm_campaign=django
+    about: Explore the expected dashboard output before opening an issue.
+

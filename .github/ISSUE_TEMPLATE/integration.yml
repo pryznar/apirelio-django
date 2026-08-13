@@ -1,0 +1,54 @@
+name: Integration problem
+description: Report a framework integration, setup or telemetry delivery problem.
+title: "[Integration]: "
+labels:
+  - integration
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Apirelio. Do not include API keys, payloads, credentials, customer names or other sensitive data.
+  - type: input
+    id: sdk-version
+    attributes:
+      label: SDK version
+      placeholder: e.g. 0.2.0
+    validations:
+      required: true
+  - type: input
+    id: framework-version
+    attributes:
+      label: Framework and runtime version
+      placeholder: e.g. Rails 8.0 / Ruby 3.4
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Include the smallest safe configuration or link to a public reproduction repository.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and sanitized logs
+      description: Remove API keys, authorization values, customer identifiers and payload data.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I reproduced this with the latest SDK version.
+          required: true
+        - label: I removed secrets, payloads and customer data from this report.
+          required: true
+
