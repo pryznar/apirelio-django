@@ -19,7 +19,7 @@ from django.http import HttpRequest
 from django.http.response import HttpResponseBase
 from django.utils.module_loading import import_string
 
-SDK_VERSION = "0.2.0"
+SDK_VERSION = "0.2.1"
 ResolverValue = TypeVar("ResolverValue")
 Resolver = Callable[[HttpRequest], Optional[ResolverValue]]
 ErrorCodeResolver = Callable[

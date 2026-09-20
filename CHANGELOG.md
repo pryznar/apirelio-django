@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.1 - 2026-09-20
+
+- Refresh the tested Python framework and tooling baseline.
+- Report SDK version 0.2.1 in captured telemetry.
+
 ## 0.2.0
 
 - Add synchronous and asynchronous Django middleware.

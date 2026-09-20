@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "apirelio-django"
-version = "0.2.0"
+version = "0.2.1"
 description = "Fail-safe customer-aware API analytics middleware for Django and Django REST Framework."
 readme = "README.md"
 requires-python = ">=3.9"
@@ -13,7 +13,7 @@ license-files = ["LICENSE"]
 authors = [{ name = "Apirelio" }]
 keywords = ["apirelio", "django", "drf", "api", "analytics", "observability"]
 dependencies = [
-  "apirelio>=0.2.0,<0.3.0",
+  "apirelio>=0.2.1,<0.3.0",
   "django>=4.2,<7",
 ]
 classifiers = [
